@@ -41,7 +41,7 @@ export const fetchFlows = async ({
         }
     }`;
     const res = await apiClient.nextPimApi(query);
-    return res?.flows?.edges.map((edge: any) => {
+    return res?.flows?.edges?.map((edge: any) => {
         return {
             name: edge.node.name,
             identifier: edge.node.identifier,
